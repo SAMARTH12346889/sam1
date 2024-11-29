@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('IMG.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.accordion-container {
+    text-align: left;
+}
+
+.accordion {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.accordion:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.accordion-title {
+    font-size: 24px;
+    color: #ff6a00;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.accordion-title:hover {
+    color: #ee0979;
+}
+
+.accordion-content {
+    display: none; /* Initially hidden */
+    font-size: 30px;
+    color: #ddd;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.accordion-content ul {
+    padding-left: 20px;
+}
+
+.accordion-content ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+/* Show content when expanded */
+.accordion.open .accordion-content {
+    display: block;
+}
